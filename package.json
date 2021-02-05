@@ -2,9 +2,9 @@
   "name": "app-angular",
   "version": "0.0.0",
   "scripts": {
-    "heroku-postbuild": "ng build --prod && npm install -g http-server-spa",
+    "heroku-postbuild": "ng build --prod && npm install -g http-server",
     "ng": "ng",
-    "start": "http-server-spa dist/app-angular /index.html 8080",
+    "start": "http-server  dist/app-angular /index.html 8080",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
