@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Account } from '../models/account';
 import { Agency } from '../models/Agency';
 import { Client } from '../models/Client';
-import { ServiceClientService } from '../Services/service-Client.service';
+import { ServiceClientService } from '../Services/service-client.service';
 import { NotificationService } from '../Services/service-notifications.service';
 
 @Component({
