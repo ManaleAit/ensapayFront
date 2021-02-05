@@ -1,0 +1,92 @@
+<app-navbar></app-navbar>
+<div class="stylediv"></div>
+<div class="main-content marleftCadre">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card  ">
+                    <div class="card-header colorStyleCadre marleft ">
+                        <h4 class="card-title  text-white ">Ajouter un client </h4>
+                    </div>
+                    <div class="card-body ">
+                        <form [formGroup]="FormulaireControl" (ngSubmit)="onSubmit()">
+                            <h4 class="styleh4">Les informations personelles </h4>
+                            <hr>
+                            <div class="input-group  mb-3">
+
+                                <input type="text" class="form-control" id="firstName" placeholder="Prénom*"
+                                    formControlName="firstName">
+
+                                <div *ngIf=" send &&  firstName.invalid" class="text-danger">
+                                   Prénom est obligatoire*
+                                </div>
+                                <input type="text" class="form-control" id="lastName" placeholder="Nom*"
+                                    formControlName="lastName">
+
+                                <div *ngIf="send &&  lastName.invalid" class="text-danger">
+                                    Nom est obligatoire*
+                                </div>
+                            </div>
+
+
+
+                            <div class="input-group  mb-3">
+                                <input type="text" class="form-control" id="address" placeholder="Adresse*"
+                                    formControlName="address">
+
+                                <div *ngIf="send &&  address.invalid" class="text-danger">
+                                    Addresse est obligatoire*
+                                </div>
+                                <input type="text" class="form-control" placeholder="Cin*" id="cin" formControlName="cin">
+
+                                <div *ngIf="send &&  cin.invalid" class="text-danger">
+                                    cin est obligatoire*
+                                </div>
+                            </div>
+
+                            <div class="input-group  mb-3">
+                                <input type="text" class="form-control" placeholder="Email*" id="email" formControlName="email">
+
+                                <div *ngIf="send &&  email.invalid" class="text-danger">
+                                    email est obligatoire*
+                                </div>
+                                <input type="text" class="form-control" placeholder="Telephone*" id="tel" formControlName="tel">
+
+                                <div *ngIf="send &&  tel.invalid" class="text-danger">
+                                    telephone est obligatoire*
+                                </div>
+                            </div>
+                            
+
+                            
+                            <h4 class="styleh4">Les Informations de l'account </h4>
+                            <hr>
+
+
+                            <div class="input-group  mb-3">
+                                <input type="text" class="form-control" placeholder="montant*"  id="amount" formControlName="amount">
+
+                                <div *ngIf="send &&  amount.invalid" class="text-danger">
+                                    montant est obligatoire*
+                                </div>
+                                <input type="text" class="form-control" id="accountType" placeholder=" Type de l'account*"
+                                    formControlName="accountType">
+
+                                <div *ngIf="send &&  accountType.invalid" class="text-danger">
+                                    Type de l'account est obligatoire*
+                                </div>
+                            </div>
+
+
+
+                            <br><br>
+                            <button class="btn colorStyle w-100" type="submit" id="submitAjout" (click)="SendChange()"><span>Ajouter un
+                                    client</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

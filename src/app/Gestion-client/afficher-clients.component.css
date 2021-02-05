@@ -1,0 +1,32 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
+
+.backColor{
+    background-color:rgb(1, 1, 31);
+  }
+.colorText{
+    color:  rgb(143, 148, 251);
+}
+.main-head{
+    height: 150px;
+    background: #FFF;
+   
+}
+
+.marleft{
+    text-align: center;
+    background-color: rgb(143, 148, 251);
+}
+.colorStyleTable{
+    background-color: rgb(143, 148, 251);
+}
+.cardStyle {
+    width: 150%;
+}
+
+.bgColor{
+
+    background-color:rgb(109, 42, 109);
+  }

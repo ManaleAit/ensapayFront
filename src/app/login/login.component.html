@@ -1,0 +1,36 @@
+<div class="sidenav">
+   <div class="login-main-text">
+   
+   </div>
+</div>
+<div>
+   <img class="image1" src="../../assets/img/p2.PNG"/>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+               <form [formGroup]="Formulaire" (ngSubmit)="onSubmit()">
+                  <h3 class="leftEsp">Authentification</h3>
+                  <br><br>
+                  <div class="form-group">
+                     <input type="text" class="form-control" id="username" placeholder="Numéro de telephone" formControlName="username">
+      
+                     <div *ngIf="send &&  username.invalid" class="text-danger">
+                        Numéro de telephone est obligatoire*
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <input type="password" class="form-control" id="password" placeholder="Mode de passe" formControlName="password">
+      
+                     <div *ngIf="send &&  password.invalid" class="text-danger">
+                       le mot de passe est obligatoire*
+                     </div>
+                  </div>
+                  <br><br>
+                  <button type="submit" class="btn colorBut p-3 d-inline w-100 " id="login" (click)="SendChange()">Connection</button>
+               </form>
+               <p class="colorText">Mot de passe oublie?</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <img class="image3" src="../../assets/img/p3.PNG"/>
